@@ -16,7 +16,10 @@ export default class PlantList extends Component {
          plants: response.data.plantsData
        })
      })
-  }
+     .catch((error) => {
+       console.log(error);
+     })
+  };
 
   // when the component mounts:
   //   - fetch data from the server endpoint - http://localhost:3333/plants
